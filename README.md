@@ -32,7 +32,7 @@ Make sure you have the following installed:
 
    ```bash
    git clone https://github.com/Lucasdota/todo-app-frontend.git
-   cd todo-app
+   cd todo-app-frontend
    ```
    
 2. **Install the dependencies:**
@@ -49,7 +49,7 @@ Make sure you have the following installed:
    DB_HOST=localhost
    DB_USER=your_db_username
    DB_PASSWORD=your_db_password
-   DB_NAME=todolist_db
+   DB_NAME=your_db_name
    ```
 
 4. **Run the development server:**
@@ -62,11 +62,14 @@ Make sure you have the following installed:
 
 Open your browser and navigate to http://localhost:3000.
 
+Don't forget to create a database postgreSQL or mySQL and turn it on.
+
 ### Usage
 
 - **Registration**: Users can create an account by providing their email and password.
 - **Login**: Users can log in with their registered email and password.
 - **Todo Management**: Once logged in, users can create, view, update, and delete their todo items.
+
 
 ### Folder Structure
 
