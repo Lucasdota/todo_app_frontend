@@ -1,5 +1,5 @@
 # Todo App
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Lucasdota/todo_app_frontend/blob/master/LICENSE)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Lucasdota/todo_app_frontend2/blob/master/LICENSE)
 
 A simple Todo application built with Next.js, React, TypeScript, and Tailwind CSS. This app allows users to register, log in with their email and password, and manage their todo items.
 
@@ -31,7 +31,7 @@ Make sure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/todo-app.git
+   git clone https://github.com/Lucasdota/todo-app-frontend.git
    cd todo-app
    ```
    
@@ -72,8 +72,7 @@ Open your browser and navigate to http://localhost:3000.
 
   ```bash
   /todo-app-frontend
-  ├── /client
-    ├── /public            # Static assets
+  ├── /public         	   # Static assets
   ├── /src
     ├── /components        # Reusable components
     ├── /app               # Next.js pages and main component
