@@ -145,14 +145,12 @@ const Form = () => {
   //show error when both passwords are not the same in each interaction
   useEffect(() => {
     if (!submittedOnce) return;
-    if (
-      passwordValue !== confirmPasswordValue && passValidated
-    ) {
+    if (passwordValue !== confirmPasswordValue && passValidated) {
       setConfirmError("Passwords are not the same.");
     } else {
       setConfirmError("");
     }
-  }, [passwordValue, submittedOnce, confirmPasswordValue]);
+  }, [passwordValue, submittedOnce, confirmPasswordValue, passValidated]);
 
   return (
     <form
