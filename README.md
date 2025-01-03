@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo App
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Lucasdota/todo_app_frontend/blob/master/LICENSE)
+
+A simple Todo application built with Next.js, React, TypeScript, and Tailwind CSS. This app allows users to register, log in with their email and password, and manage their todo items.
+
+## Features
+
+- User registration and authentication
+- Create, read, update, and delete todo items
+- Responsive design using Tailwind CSS
+- TypeScript for type safety
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) - React framework for server-side rendering
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Make sure you have the following installed:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository:**
 
-## Learn More
+   ```bash
+   git clone https://github.com/yourusername/todo-app.git
+   cd todo-app
+   ```
+   
+2. **Install the dependencies:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Set up environment variables:**
+   
+   ```bash
+   DB_HOST=localhost
+   DB_USER=your_db_username
+   DB_PASSWORD=your_db_password
+   DB_NAME=todolist_db
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Run the development server:**
+   
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-## Deploy on Vercel
+Open your browser and navigate to http://localhost:3000.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Registration**: Users can create an account by providing their email and password.
+- **Login**: Users can log in with their registered email and password.
+- **Todo Management**: Once logged in, users can create, view, update, and delete their todo items.
+
+### Folder Structure
+
+  ```bash
+  /todo-app-frontend
+  ├── /client
+    ├── /public            # Static assets
+  ├── /src
+    ├── /components        # Reusable components
+    ├── /app               # Next.js pages and main component
+    ├── middleware.js      # Middleware to protect paths
+  ├── .env.local           # Environment variables
+  ├── package.json         # Project metadata and dependencies
+  ├── tailwind.config.ts   # Tailwind configuration
+  └── tsconfig.json        # TypeScript configuration
+  ```
+
+### Acknowledgments
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://react.dev/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
