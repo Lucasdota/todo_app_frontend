@@ -17,7 +17,7 @@ export default function Interface() {
 	const [menu, setMenu] = useState<boolean>(false);
 	const [redirectPopUp, setRedirectPopUp] = useState<boolean>(false);
 	const router = useRouter();
-	const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
+	const backendURL = "http://localhost:8080";	
 
   const fetchUserInfo = async () => {
     try {

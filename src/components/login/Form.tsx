@@ -15,7 +15,7 @@ const Form = () => {
   const [isFetching, setIsFetching] = useState<boolean>(false);
   const serverErrorRef = useRef<HTMLSpanElement | null>(null);
   const router = useRouter();
-  const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
+  const backendURL = "http://localhost:8080";	
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();

@@ -15,7 +15,7 @@ export default function PopUp({ userId, setPopUp, fetchUserInfo }: Props) {
   const [nameError, setNameError] = useState<string>("");
   const [descriptionError, setDescriptionError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-  const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
+  const backendURL = "http://localhost:8080";	
 
   const validateInputs = () => {
     let isValid = true;

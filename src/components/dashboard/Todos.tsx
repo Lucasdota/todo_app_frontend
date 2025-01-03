@@ -31,7 +31,7 @@ export default function Todos({
   setRedirectPopUp,
   logout
 }: Props) {
-	const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
+	const backendURL = "http://localhost:8080";	
 	
   const handleCreate = () => {
     setPopUp(true);

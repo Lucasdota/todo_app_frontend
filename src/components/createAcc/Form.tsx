@@ -24,7 +24,7 @@ const Form = () => {
 	const passErrorRef = useRef<HTMLSpanElement | null>(null);
 	const confirmPassErrorRef = useRef<HTMLSpanElement | null>(null);
 	const router = useRouter();
-	const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
+	const backendURL = "http://localhost:8080";	
 
   function validateForm(data: formDataObj) {
     // validate password
