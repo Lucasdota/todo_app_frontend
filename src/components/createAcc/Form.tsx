@@ -82,7 +82,7 @@ const Form = () => {
 		if (validated) {
 			try {
 				setIsFetching(true);
-				const response = await fetch(`${backendURL}/register`, {
+				const response = await fetch(`${backendURL}/auth/register`, {
           method: "POST",
           credentials: "include",
           headers: {
