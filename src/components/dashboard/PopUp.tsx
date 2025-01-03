@@ -15,6 +15,7 @@ export default function PopUp({ userId, setPopUp, fetchUserInfo }: Props) {
   const [nameError, setNameError] = useState<string>("");
   const [descriptionError, setDescriptionError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
 
   const validateInputs = () => {
     let isValid = true;
@@ -44,7 +45,7 @@ export default function PopUp({ userId, setPopUp, fetchUserInfo }: Props) {
     if (!validateInputs()) return;
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:8080/todo`, {
+      const response = await fetch(`${backendURL}/todo`, {
         method: "POST",
         credentials: "include",
         headers: {

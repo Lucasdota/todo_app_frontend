@@ -12,10 +12,11 @@ export default function ConfigMenu({ setMenu, setRedirectPopUp, logout }: Props)
   const [isSurePopUp, setIsSurePopUp] = useState<boolean>(false);
   const configSection = useRef<HTMLUListElement>(null);
   const router = useRouter();
+  const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
 
   const deleteAcc = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/user`, {
+      const response = await fetch(`${backendURL}/user`, {
         method: "DELETE",
         credentials: "include",
         headers: {

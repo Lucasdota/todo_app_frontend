@@ -17,10 +17,11 @@ export default function Interface() {
 	const [menu, setMenu] = useState<boolean>(false);
 	const [redirectPopUp, setRedirectPopUp] = useState<boolean>(false);
 	const router = useRouter();
+	const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
 
   const fetchUserInfo = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/user`, {
+      const response = await fetch(`${backendURL}/user`, {
         method: "GET",
         credentials: "include",
       });
@@ -48,7 +49,7 @@ export default function Interface() {
 
 	const Logout = async () => {
     try {
-      const response = await fetch("http://localhost:8080/auth/logout", {
+      const response = await fetch(`${backendURL}/auth/logout`, {
         method: "POST",
         credentials: "include", // include cookies in the request
       });

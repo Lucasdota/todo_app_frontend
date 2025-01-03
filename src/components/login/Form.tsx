@@ -15,6 +15,7 @@ const Form = () => {
   const [isFetching, setIsFetching] = useState<boolean>(false);
   const serverErrorRef = useRef<HTMLSpanElement | null>(null);
   const router = useRouter();
+  const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -29,7 +30,7 @@ const Form = () => {
     // send request to the server
 		try {
 			setIsFetching(true);
-			const response = await fetch(`http://localhost:8080/auth/login`, {
+			const response = await fetch(`${backendURL}/auth/login`, {
         method: "POST",
         body: JSON.stringify({
           email: formDataObj.userEmail,

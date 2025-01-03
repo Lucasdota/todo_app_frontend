@@ -24,6 +24,7 @@ const Form = () => {
 	const passErrorRef = useRef<HTMLSpanElement | null>(null);
 	const confirmPassErrorRef = useRef<HTMLSpanElement | null>(null);
 	const router = useRouter();
+	const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
 
   function validateForm(data: formDataObj) {
     // validate password
@@ -81,7 +82,7 @@ const Form = () => {
 		if (validated) {
 			try {
 				setIsFetching(true);
-				const response = await fetch(`http://localhost:8080/auth/register`, {
+				const response = await fetch(`${backendURL}/register`, {
           method: "POST",
           credentials: "include",
           headers: {

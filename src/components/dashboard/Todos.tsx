@@ -31,6 +31,7 @@ export default function Todos({
   setRedirectPopUp,
   logout
 }: Props) {
+	const backendURL = "https://todo-app-backend-1nyx.onrender.com";	
 	
   const handleCreate = () => {
     setPopUp(true);
@@ -38,7 +39,7 @@ export default function Todos({
 
   const handleCheckboxChange = async (todoId: number) => {	
     try {
-      const response = await fetch(`http://localhost:8080/todo`, {
+      const response = await fetch(`${backendURL}/todo`, {
         method: "PUT",
         credentials: "include",
         headers: {
