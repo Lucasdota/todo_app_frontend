@@ -82,7 +82,7 @@ const Form = () => {
 			try {
 				setIsFetching(true);
 				const response = await fetch(
-          `https://todo-app-backend-1nyx.onrender.com/auth/register`,
+          `${process.env.BACKEND_URL}/auth/register`,
           {
             method: "POST",
             credentials: "include",

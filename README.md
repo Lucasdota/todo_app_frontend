@@ -46,10 +46,7 @@ Make sure you have the following installed:
 3. **Set up environment variables:**
    
    ```bash
-   DB_HOST=localhost
-   DB_USER=your_db_username
-   DB_PASSWORD=your_db_password
-   DB_NAME=your_db_name
+   BACKEND_URL=your_backend_url
    ```
 
 4. **Run the development server:**
@@ -62,7 +59,7 @@ Make sure you have the following installed:
 
 Open your browser and navigate to http://localhost:3000.
 
-Don't forget to create a database postgreSQL or mySQL and turn it on.
+Don't forget to create a database postgreSQL or mySQL and run both database and backend.
 
 ### Usage
 

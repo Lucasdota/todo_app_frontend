@@ -3,7 +3,7 @@ import { LiaWindowCloseSolid } from "react-icons/lia";
 import Spinner from '../shared/Spinner';
 
 type Props = {
-  userId: Number | null;
+  userId: number | null;
   setPopUp: Dispatch<SetStateAction<boolean>>;
   fetchUserInfo: () => void;
 };
@@ -61,6 +61,7 @@ export default function PopUp({ userId, setPopUp, fetchUserInfo }: Props) {
         throw new Error("Failed to create todo.");
       }
     } catch (err) {
+	  console.error(err);		
       setLoading(false);
     } finally {
 			setLoading(false);

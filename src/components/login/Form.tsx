@@ -29,20 +29,17 @@ const Form = () => {
     // send request to the server
 		try {
 			setIsFetching(true);
-			const response = await fetch(
-        `https://todo-app-backend-1nyx.onrender.com/auth/login`,
-        {
-          method: "POST",
-          body: JSON.stringify({
-            email: formDataObj.userEmail,
-            password: formDataObj.userPass,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+			const response = await fetch(`${process.env.BACKEND_URL}/auth/login`, {
+        method: "POST",
+        body: JSON.stringify({
+          email: formDataObj.userEmail,
+          password: formDataObj.userPass,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
 			if (!response.ok) {
 				throw new Error("Invalid email or password.");			
 			}

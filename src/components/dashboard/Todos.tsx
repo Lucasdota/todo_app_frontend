@@ -8,7 +8,7 @@ import RedirectPopUp from './RedirectPopUp';
 
 type Props = {
   todos: TodosType[] | null;
-  userId: Number | null;
+  userId: number | null;
   fetchUserInfo: () => void;
   popUp: boolean;
   setPopUp: Dispatch<SetStateAction<boolean>>;
@@ -36,7 +36,7 @@ export default function Todos({
     setPopUp(true);
   };
 
-  const handleCheckboxChange = async (todoId: Number) => {	
+  const handleCheckboxChange = async (todoId: number) => {	
     try {
       const response = await fetch(`${process.env.BACKEND_URL}/todo`, {
         method: "PUT",
@@ -56,7 +56,7 @@ export default function Todos({
     }
   };
 
-  const deleteTodo = async (todoId: Number) => {
+  const deleteTodo = async (todoId: number) => {
     try {
       const response = await fetch(`${process.env.BACKEND_URL}/todo`, {
         method: "DELETE",

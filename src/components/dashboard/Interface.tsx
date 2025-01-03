@@ -8,7 +8,7 @@ import { PiGearSix } from "react-icons/pi";
 import { useRouter } from 'next/navigation';
 
 export default function Interface() {
-	const [userId, setUserId] = useState<Number | null>(null);
+	const [userId, setUserId] = useState<number | null>(null);
   const [email, setEmail] = useState<string>("");
   const [todos, setTodos] = useState<TodosType[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -30,7 +30,9 @@ export default function Interface() {
       const userDetails = await response.json();							
 		setUserId(userDetails.id);
       setEmail(userDetails.email);
-	  const sortedTodos = userDetails.todos.sort((a: any, b: any) => a.id - b.id);
+	  const sortedTodos = userDetails.todos.sort(
+      (a: TodosType, b: TodosType) => a.id - b.id
+    );
       setTodos(sortedTodos);
     } catch (err: unknown) {
       if (err instanceof Error) {
