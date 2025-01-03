@@ -1,10 +1,7 @@
 import Form from "./Form";
 import CreateAccBtn from "./CreateAccBtn";
 
-type Props = {
-};
-
-const Login = (props: Props) => {
+const Login = () => {
   return (
     <section
       aria-label="login area"

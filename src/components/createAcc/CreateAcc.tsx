@@ -1,9 +1,7 @@
 import React from 'react'
 import Form from "./Form"
 
-type Props = {}
-
-const CreateAcc = (props: Props) => {
+const CreateAcc = () => {
 	return (
     <section
       aria-label="create account area"

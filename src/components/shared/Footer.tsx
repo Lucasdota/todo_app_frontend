@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = () => {
 	return (
     <section aria-label="footer">
       <p className="text-sm font-bold text-neutral-500 text-center">
