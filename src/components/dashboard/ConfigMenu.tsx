@@ -15,9 +15,9 @@ export default function ConfigMenu({ setMenu, setRedirectPopUp, logout }: Props)
 
   const deleteAcc = async () => {
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/user`, {
+      const response = await fetch(`http://localhost:8080/user`, {
         method: "DELETE",
-				credentials: "include",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

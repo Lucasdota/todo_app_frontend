@@ -81,20 +81,17 @@ const Form = () => {
 		if (validated) {
 			try {
 				setIsFetching(true);
-				const response = await fetch(
-          `${process.env.BACKEND_URL}/auth/register`,
-          {
-            method: "POST",
-            credentials: "include",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email: formDataObj.userEmail,
-              password: formDataObj.userPass,
-            }),
-          }
-        );
+				const response = await fetch(`http://localhost:8080/auth/register`, {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: formDataObj.userEmail,
+            password: formDataObj.userPass,
+          }),
+        });
 				const data = await response.text();
 				if (!response.ok) {	
 					setServerError(data);

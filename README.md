@@ -59,7 +59,7 @@ Make sure you have the following installed:
 
 Open your browser and navigate to http://localhost:3000.
 
-Don't forget to create a database postgreSQL or mySQL and run both database and backend.
+Don't forget to create a database postgreSQL and run both database and backend.
 
 ### Usage
 

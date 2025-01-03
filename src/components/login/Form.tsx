@@ -29,7 +29,7 @@ const Form = () => {
     // send request to the server
 		try {
 			setIsFetching(true);
-			const response = await fetch(`${process.env.BACKEND_URL}/auth/login`, {
+			const response = await fetch(`http://localhost:8080/auth/login`, {
         method: "POST",
         body: JSON.stringify({
           email: formDataObj.userEmail,

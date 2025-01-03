@@ -38,7 +38,7 @@ export default function Todos({
 
   const handleCheckboxChange = async (todoId: number) => {	
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/todo`, {
+      const response = await fetch(`http://localhost:8080/todo`, {
         method: "PUT",
         credentials: "include",
         headers: {
@@ -58,7 +58,7 @@ export default function Todos({
 
   const deleteTodo = async (todoId: number) => {
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/todo`, {
+      const response = await fetch(`http://localhost:8080/todo`, {
         method: "DELETE",
         credentials: "include",
         headers: {

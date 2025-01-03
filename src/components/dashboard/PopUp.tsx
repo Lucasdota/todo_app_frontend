@@ -44,7 +44,7 @@ export default function PopUp({ userId, setPopUp, fetchUserInfo }: Props) {
     if (!validateInputs()) return;
     setLoading(true);
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/todo`, {
+      const response = await fetch(`http://localhost:8080/todo`, {
         method: "POST",
         credentials: "include",
         headers: {

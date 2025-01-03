@@ -20,7 +20,7 @@ export default function Interface() {
 
   const fetchUserInfo = async () => {
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/user`, {
+      const response = await fetch(`http://localhost:8080/user`, {
         method: "GET",
         credentials: "include",
       });
