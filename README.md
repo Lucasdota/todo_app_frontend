@@ -77,7 +77,7 @@ Don't forget to create a database postgreSQL or mySQL and run both database and 
     ├── /components        # Reusable components
     ├── /app               # Next.js pages and main component
     ├── middleware.js      # Middleware to protect paths
-  ├── .env.local           # Environment variables
+  ├── .env          	   # Environment variables
   ├── package.json         # Project metadata and dependencies
   ├── tailwind.config.ts   # Tailwind configuration
   └── tsconfig.json        # TypeScript configuration
